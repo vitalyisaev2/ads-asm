@@ -10,4 +10,7 @@ build:
 	nasm -f elf -g -F dwarf -o app.o -l app.lst $(BUILD_ARGS)
 	ld -m elf_i386 -o app app.o
 
+clean:
+	rm -f app*
+
 .PHONY: build
